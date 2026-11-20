@@ -3,7 +3,11 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RFIDCheck</title>
 <meta name="description" content="Offline desktop system that processes raw RFID & turnstile exports in seconds. Find uncollected overstays, separate municipal subsidies and generate director-ready reports — no internet, no monthly fees.">
-<meta property="og:type" content="website"><meta property="og:title" content="RFIDCheck — Turnstile log analysis, offline"><meta property="og:description" content="Offline desktop system that processes raw RFID & turnstile exports in seconds. Find uncollected overstays, separate municipal subsidies and generate director-ready reports — no internet, no monthly fees.">
+<meta property="og:type" content="website"><meta property="og:title" content="RFIDCheck"><meta property="og:description" content="Offline desktop system that processes raw RFID & turnstile exports in seconds. Find uncollected overstays, separate municipal subsidies and generate director-ready reports — no internet, no monthly fees.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -289,7 +293,6 @@ const href=k=>file?(k==='en'?'?':'?lang='+k):(k==='en'?BASE:BASE+k+'/');
 function route(){let p=file?(new URLSearchParams(location.search).get('lang')||''):location.pathname.replace(/\/+$/,'').split('/').pop().replace('.html','');if(p==='index')p='';return R[p]!==undefined?(p||'en'):'en'}
 function apply(k){const d=T[L[k]]||T.en;
  $$('[data-t]').forEach(e=>e.textContent=d[e.dataset.t]??T.en[e.dataset.t]);
- document.title=d[91]??T.en[91];
  $$('[data-co]').forEach(a=>a.href=CHECKOUT_URL);
  $$('[data-lbl]').forEach(e=>e.textContent=(LBL[L[k]]||LBL.en)[e.dataset.lbl]);
  $$('[data-dp]').forEach(e=>e.textContent=DP[L[k]]||DP.en);
